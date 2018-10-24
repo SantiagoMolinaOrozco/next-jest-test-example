@@ -1,0 +1,54 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run project",
+      "group": "build",
+      "dependsOn": [ 
+        "npm run api", 
+        "npm run app" 
+      ]
+    },
+    {
+      "label": "install dependencies",
+      "group": "build",
+      "dependsOn": [ 
+        "api npm install",
+        "api npm install"
+      ]
+    },
+    {
+      "label": "npm run api",
+      "type": "npm",
+      "script": "server",
+      "path": "api/",
+      "group": "build"
+    },
+    {
+      "label": "npm run app",
+      "type": "npm",
+      "script": "dev",
+      "path": "app/",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "api npm install",
+      "type": "npm",
+      "script": "install",
+      "path": "api/",
+      "group": "build"
+    },
+    {
+      "label": "app npm install",
+      "type": "npm",
+      "script": "install",
+      "path": "app/",
+      "group": "build"
+    }
+  ]
+}

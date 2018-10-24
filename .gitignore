@@ -1,6 +1,10 @@
 .DS_STORE
-node_modules
+**/node_modules/
 .module-cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+./idea
 *.log*
 build
 dist

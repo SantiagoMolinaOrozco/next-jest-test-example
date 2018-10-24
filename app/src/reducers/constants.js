@@ -1,0 +1,8 @@
+export default {
+  ADD_POST: 'ADD_POST',
+  REPLACE_POSTS: 'REPLACE_POSTS',
+  ERROR_TO_REPLACE_POSTS: 'ERROR_TO_REPLACE_POSTS',
+  ERROR_TO_ADD_POST: 'ERROR_TO_ADD_POST'
+}
+
+export const urlApi = 'http://localhost:3000/'
